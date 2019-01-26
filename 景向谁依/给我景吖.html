@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>给我景吖</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+				/*background-color: #f9ecee;*/
+
+			}
+			ul,li{
+				list-style: none;
+			}
+			.tou{
+				width:100%;
+				height: 132px;
+				
+				margin-top: 0px;
+				z-index:100;
+				background-color: #fac4cc;
+			}
+			.cover{
+				width: 100%;
+				height: 132px;
+				z-index:100;
+				background-color: #fac4cc;
+				
+			}
+			.touz{
+				width: 1180px;
+				height: 132px;
+				margin:0 auto; 	
+				font-size: 60px;	
+				background-color: #fac4cc;	
+				font-family:"STXingkai";
+			}
+			.f{
+				width:100%;
+				height: 660px;
+				background-color: #f9ecee;
+			}
+			.box{
+				width: 1000px;
+				height: 660px;
+				
+				
+				position: relative;
+				overflow: hidden;
+				margin:0 auto;
+			}
+			.slider{
+				width: 26000px;
+				position: absolute;
+				left: -1000px;
+				background-color: #f9ecee;
+			}
+			.slide{
+				width: 1000px;
+				overflow: hidden;
+				float: left;
+
+			}
+			.box>img{
+				display: block;
+				width: 60px;
+				height: 60px;
+				text-align: center;
+				cursor: pointer;
+				color: #fff;
+				top: 175px;
+				line-height: 50px;
+				/*background: rgb(255,0,0);*/
+				font-size: 30px;
+				position: absolute;
+				/* display: none; */
+				opacity: 0;
+			}
+			#left{
+				top:285px;
+				left: 15px;
+			}
+			#right{
+				top:285px;
+				right: 15px;
+			}
+			.nav{
+				position: absolute;
+				left: 330px;
+				bottom: 20px;
+			}
+			.nav>li{
+				float: left;
+				width: 20px;
+				height: 20px;
+				background: #ccc;
+				cursor: pointer;
+				margin: 0 10px;
+				border-radius: 50%;
+				text-align: center;
+			}
+			.nav .active{
+				background: red;
+				color: #476954;
+			}
+			.f1{
+				width: 100%;
+				height: 780px;
+				background-color: #f9ecee;
+				background-image: url(b4.png) ;
+				background-size: 100% 100%；
+				background-repeat:no-repeat;
+				-moz-background-size:100% 100%;
+			}
+			#but{
+				width: 350px;
+				height: 80px;
+				margin:0 auto;
+				text-align: center;
+				padding-top: 400px;
+			}
+			#but1{
+				width: 350px;
+				height: 80px;
+				font-size: 25px;
+				font-family:"STLiti";
+				color: #363b3a;
+				border-radius: 20px;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#gaob{
+				width: 350px;
+				height: 80px;
+				margin:0 auto;
+				text-align: center;
+				padding-top: 40px;
+			}
+			#gaob1{
+				width: 350px;
+				height: 80px;
+				font-size: 25px;
+				font-family:"STLiti";
+				color: #363b3a;
+				border-radius: 20px;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			/*#butt{
+				width: 400px;
+				height: 500px;
+				margin:0 auto;
+				background-image: url(b.png) ;
+
+    			background-size:100% 100%;  	
+			}*/
+			/*#butt1{
+				width: 400px;
+				height: 120px;
+				font-size: 22px;
+				font-family:"Times New Roman", Times, serif;
+				border-radius: 15px;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+				margin-top: 370px;
+			
+			}*/
+			
+			#tanc{
+				width: 800px;
+				height: 800px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:700px;
+				left: 25%;
+				z-index:1002;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(b.png) ;
+				
+
+			}
+			#z{
+				width: 730px;
+				height: 800px;
+				margin:0 auto;
+			}
+			#tb1{
+				width: 200px;
+				height: 45px;
+				border:1.5px solid #ffcccc;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 20px;
+				margin-left: 30px;
+				float: left;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#tb2{
+				width: 200px;
+				height: 45px;
+				border:1px solid #a5d8da;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 20px;
+				margin-left: 150px;
+				float: left;
+				background-color: #a5d8da;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#zhao{
+				display: none; 
+				position: absolute; 	
+				top: 0%; 	
+				left: 0%; 	
+				width: 100%; 	
+				height: 1600px; 	
+				background-color: #dedcd8; 	
+				z-index:1001; 	
+				-moz-opacity: 0.6; 	
+				opacity:0.6; 	
+				filter: alpha(opacity=60);
+			}
+			#tanc0{
+				width: 800px;
+				height: 800px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:700px;
+				left: 25%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(b1.png) ;
+				font-family: "STKaiti";
+				font-size: 20px;
+				color: #f61d0d;
+			}
+			.z0{
+				width: 740px;
+				height: 800px;
+				margin:0 auto;
+			}
+			.z0>p{
+				margin-top: 12px;
+			}
+			#tanc2{
+				width: 720px;
+				height: 800px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:700px;
+				left: 25%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(20.jpg) ;
+				font-family: "SimHei";
+				font-size: 40px;
+				color: #f61d0d;
+
+			}
+			.left{
+				width: 250px;
+				height: 660px;
+				float: left;
+				background-image: url(left.png) ;
+				/*background-size: 100% 100%;*/
+				
+			}
+			.right{
+				width: 250px;
+				height: 660px;
+				float: left;
+				background-image: url(right.png) ;
+			}
+			.center{
+				width: 1000px;
+				height: 660px;
+				float: left;
+			}
+			.lunz{
+				width: 1500px;
+				height: 660px;
+				margin:0 auto;
+			}
+			.hua{
+				width: 730px;
+				height: 650px;
+				margin:0 auto;
+			}
+			.rs{
+				width: 730px;
+				height: 30px;
+				
+				cursor: pointer;
+			}
+			.rs-zi{
+				 font-size: 25px;
+				 margin-left: 10px;
+				 margin-top: 14px;
+				 color: #fe798c;
+				 font-family: "STXingkai";
+				 text-align: center;
+			}
+			#box1{
+				width: 730px;
+				height: 600px;
+				position: relative;
+				overflow: hidden;
+			}
+			#rx{
+				width: 730px;
+				height: 1620px;
+				position: absolute;
+				top: 0px;
+			}
+			.rx-zi{
+				font-size: 18px;
+				margin-top: 13px;
+				margin-left: 16px;
+				color:#6e575b;
+				width: 800px;
+				overflow: hidden;
+				cursor: pointer;
+				font-family: "LiSu";
+			}
+			#tb{
+				width: 200px;
+				height: 45px;
+				border:1.5px solid #ffcccc;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 35px;
+				margin-left: 230px;
+				float: left;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.tip{
+				width: 730px;
+				height: 15px;
+				font-size: 15px;
+				margin-left: 220px;
+				margin-top: 10px;
+				font-family: "STXingkai";
+				color: #fe798c;
+			}
+			#tb0{
+				width: 200px;
+				height: 45px;
+				border:1.5px solid #ffcccc;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 20px;
+				margin-left: 230px;
+				float: left;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#tanc00{
+				width: 900px;
+				height: 600px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:700px;
+				left: 20%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(b2.png) ;
+			}
+			#tanc00>p{
+				font-size: 20px;
+				font-family: "STXinwei";
+				text-align: center;
+			}
+			#tb00{
+				width: 200px;
+				height: 45px;
+				border:1.5px solid #bdbfc3;
+				border-radius: 20px;
+				font-size: 15px;
+				color: #d6d7d9;
+				margin-top: 20px;
+				margin-left: 30px;
+				float: left;
+				background-color: #bdbfc3;
+				font-weight: bold;
+				cursor: pointer;
+				margin-left: 340px;
+				margin-top: 30px;
+			}
+			#tanc000{
+				width: 400px;
+				height: 400px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:700px;
+				left: 40%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(b3.png) ;	
+			}
+			#tanc000>p{
+				font-family: "STLiti";
+				font-size: 20px;
+
+			}
+			#good{
+				width: 200px;
+				height: 45px;
+				border:1.5px solid #ffcccc;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 20px;
+				margin-left: 30px;
+				float: left;
+				background-color: #ffcccc;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			#bad{
+				width: 200px;
+				height: 45px;
+				border:1px solid #a5d8da;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #ffffff;
+				margin-top: 20px;
+				margin-left: 220px;
+				float: left;
+				background-color: #a5d8da;
+				font-weight: bold;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zhao"></div>
+		<div class="tou">
+			<div class="cover">
+			<div class="touz">
+				<p style="background-color: #fac4cc;width: 700px;float: left;margin-top: 20px;">谁人闻香来，化蝶向景依</p>
+				<img src="2.png" style="width: 88px;height: 132px;float: left;position: absolute;z-index: 1;margin-left: 400px;" />
+				<p style="font-size: 25px;float: right;position: absolute;z-index: 2;top:90px;margin-left: 850px;">To——全世界最好的景向谁依</p>
+			</div>
+				
+
+			</div>
+		</div>
+	
+		
+		
+					<script type="text/javascript">
+
+						function animate(obj,json,callback){
+							clearInterval(obj.timer);
+							obj.timer = setInterval(//计时器
+								function(){
+									var isStop = true;
+									for (var attr in json) {
+										if(attr=='opacity'){
+											var now = parseInt(getStyle(obj,attr)*100);
+										}
+										else{
+											var now = parseInt(getStyle(obj,attr));
+										}
+										var speed = (json[attr]-now)/5;
+										speed=speed>0?Math.ceil(speed):Math.floor(speed);
+										if(attr=='opacity'){
+											obj.style[attr]=(now+speed)/100;
+										}
+										else{
+											obj.style[attr] = now+speed+'px';
+										}
+
+										var current = now + speed;
+										if(json[attr]!==current){
+											isStop = false;
+										}
+									}
+									if(isStop){
+										clearInterval(obj.timer);
+										callback&&callback();
+									}
+									
+								},1);
+						}
+						function animate1(obj,json){
+							clearInterval(obj.timer);
+							obj.timer = setInterval(//计时器
+								function(){
+									var isStop = true;
+									for (var attr in json) {
+										if(attr=='opacity'){
+											var now = parseInt(getStyle(obj,attr)*100);
+										}
+										else{
+											var now = parseInt(getStyle(obj,attr));
+										}
+										var speed = (json[attr]-now)/5;
+										speed=speed>0?Math.ceil(speed):Math.floor(speed);
+										if(attr=='opacity'){
+											obj.style[attr]=(now+speed)/100;
+										}
+										else{
+											obj.style[attr] = now+speed+'px';
+										}
+
+										var current = now + speed;
+										if(json[attr]!==current){
+											isStop = false;
+										}
+									}
+									// if(isStop){
+									// 	clearInterval(obj.timer);
+									// 	callback&&callback();
+									// }
+									
+								},35);
+						}
+						function getStyle(obj,style) {
+							if(getComputedStyle(obj)){
+								return getComputedStyle(obj)[style];
+							}else{
+								obj.currentStyle[style];
+							}
+						}
+
+					</script>
+					<div class="f">
+						<div class="lunz">
+							<div class="left"></div>
+							<div class="center">
+								<div class="box" id="box">
+									<div class="slider" id="slider">
+										<div class="slide"><img src="21.png" alt=""></div>
+										<div class="slide"><img src="6.png" alt=""></div>
+										<div class="slide"><img src="29.png" alt=""></div>
+										<div class="slide"><img src="3.png" alt=""></div>
+										<div class="slide"><img src="11.png" alt=""></div>
+										<div class="slide"><img src="20.png" alt=""></div>
+										<div class="slide"><img src="28.png" alt=""></div>		
+										<div class="slide"><img src="17.png" alt=""></div>
+										<div class="slide"><img src="12.png" alt=""></div>
+										<div class="slide"><img src="9.png" alt=""></div>
+										<div class="slide"><img src="14.png" alt=""></div>
+										<div class="slide"><img src="25.png" alt=""></div>
+										<div class="slide"><img src="23.png" alt=""></div>
+										<div class="slide"><img src="7.png" alt=""></div>
+										<div class="slide"><img src="13.png" alt=""></div>
+										<div class="slide"><img src="18.png" alt=""></div>
+										<div class="slide"><img src="4.png" alt=""></div>
+										<div class="slide"><img src="30.png" alt=""></div>
+										<div class="slide"><img src="19.png" alt=""></div>	
+										<div class="slide"><img src="8.png" alt=""></div>		
+										<div class="slide"><img src="26.png" alt=""></div>
+										<div class="slide"><img src="10.png" alt=""></div>
+										<div class="slide"><img src="16.png" alt=""></div>
+										<div class="slide"><img src="5.png" alt=""></div>
+										<div class="slide"><img src="21.png" alt=""></div>
+										<div class="slide"><img src="6.png" alt=""></div>
+									</div>
+									<img src="zuo.png" id="left"/>
+									<img src="you.png"/ id="right">
+									<ul class="nav" id="nav">
+										<li class="active">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+										<li>6</li>
+									</ul>
+								</div>
+							</div>
+							<div class="right"></div>
+						</div>
+					</div>
+					
+					<div class="f1">
+					<div id="but">
+						<input type="button" value="我也不知道我是个什么东西"  name="but1" id="but1" onclick="zhao()" />
+					</div>
+					<div id="gaob">
+						<input type="button" value="我可能是一封信"  name="but1" id="gaob1" onclick="zhao1()" />
+					</div>
+					</div>
+					<script type="text/javascript">
+						var slider=document.getElementById('slider');
+						var box=document.getElementById('box');
+						var left=document.getElementById('left');
+						var oNavlist=document.getElementById('nav').children;
+						var index=1;
+						function next(){
+							index++;
+							animate(slider,{left:-1000*index},function(){
+								if(index==25){
+									slider.style.left='-1000px';
+									index=1;
+							}
+							})
+							navChange();
+						}
+						function prev(){
+							index--;
+							animate(slider,{left:-1000*index},function(){
+								if(index==0){
+									slider.style.left='-24000px';
+									index=24;
+							}
+							})
+							navChange();
+						}
+						var timer=setInterval(next,2000);
+						//鼠标划上时 停止轮播 箭头淡入
+						box.onmouseover=function(){
+							clearInterval(timer); 
+							animate(left,{opacity:80});
+							animate(right,{opacity:80});
+						}
+						//鼠标划出时 继续轮播 箭头淡出
+						box.onmouseout=function(){
+							animate(left,{opacity:0});
+							animate(right,{opacity:0});
+							timer=setInterval(next,2000);
+						}
+						right.onclick=next;
+						left.onclick=prev;
+						for(var i=0;i<oNavlist.length;i++){
+							oNavlist[i].idx=i;
+							oNavlist[i].onclick=function(){
+								index=this.idx+1;
+								animate(slider,{left:-1000*index})
+								navChange();
+							}
+						}
+						function navChange(){
+							for(var i=0;i<oNavlist.length;i++){
+								oNavlist[i].className='';
+							}
+							if(index==25){
+								oNavlist[0].className='active';
+							}
+							else if(index==0){
+								oNavlist[23].className='active';
+							}
+							else{
+								oNavlist[index-1].className='active';
+							}
+						}
+						
+					</script>
+			
+				
+		<script>
+			window.onload = function() {
+				var cover = document.getElementsByClassName('cover')[0];
+				window.onscroll = function(){
+					var st = document.documentElement.scrollTop || document.body.scrollTop;
+					if (st>180) {
+						cover.style.position = 'fixed';
+					}else{
+						cover.style.position = 'static';
+					}
+				}
+			}
+		</script>
+		<div id="tanc">
+			<p style="float: right;margin-right: 10px;cursor: pointer;font-size: 20px;" onclick="zhaox()">X</p>
+			<div id="z">
+				<div class="hua">
+						<div class="rs">					
+							<p class="rs-zi">性感景老师在线沙雕<span style="font-family: 'FZShuTi';">(bushi...</span></p>
+						</div>
+						<div class="tip">
+							<p>把鼠标拿开我是会动哒</p>
+						</div>
+						<div id="box1">
+							<div id="rx">
+								<p class="rx-zi">傻了吧！今天超过字数的提问，我一律不帮你们补全！(没有怕的，根本抢不到问题...)</p>
+								<p class="rx-zi">23秒74个问题，你们是魔鬼吗？？？(20秒关问题，您是仙女吗？)</p>
+								<p class="rx-zi">包里塞的是小蝴蝶给的吃的，那我特么得背8个包！</p>	
+								<p class="rx-zi">我觉得这个奖真的是实至名归，不是...我也是受之有愧的</p>
+								<p class="rx-zi">你的景萌萌哥哥可能不想领这个奖，他不舒服，拉肚子(惨！景萌萌竟遭亲哥哥打压？)</p>
+								<p class="rx-zi">头年行大运..不是，猪年行大头...(？？)</p>	
+								<p class="rx-zi">你为什么配豌豆射手？因为我景上厕所去了</p>
+								<p class="rx-zi">不要跟我说你们女生宿舍的事，太羞耻了(?我们不说你就不知道一样)</p>
+								<p class="rx-zi">你们都要摸摸菜花，把她摸秃，摸的剩个杆我就能做干锅(这年头做粉丝还有生命危险了呢)</p>	
+								<p class="rx-zi">那个排骨的汤做的面是真tm好吃啊，好吃到我在东北玩泥巴(？？)</p>
+								<p class="rx-zi">高达)听不懂也给我勉强听！谢谢!</p>
+								<p class="rx-zi">卧槽！我立住了！我太屌了！</p>	
+								<p class="rx-zi">不要给我哈哈笑，劝你泡头，用中药</p>
+								<p class="rx-zi">大家都是成年人，尽量给你唱吧</p>
+								<p class="rx-zi">不要听着直播就傻了吧唧地盯着手机，还有一只手闲着呢，多喝热水(好吖，大家互相催呗)</p>	
+								<p class="rx-zi">哇！问题念完了，我就可以上厕所了！(..辛苦了给孩子憋的)</p>
+								<p class="rx-zi">后面就要跳舞了，但你们看不到，拉倒！</p>
+								<p class="rx-zi">你这麻辣又五香的鸭头~..你是辣的，还是不辣的，反正味道都是你定的~(你超辣的！)</p>	
+								<p class="rx-zi">烟头掉到你们给我的鼠标垫上，四舍五入就是掉我脸上了！四舍五入就是毁容了！</p>
+								<p class="rx-zi">聚众乖巧，他搞不好会抓噢(...做粉丝好难哦)</p>
+								<p class="rx-zi">推酒良方:我今天吃了头孢</p>	
+								<p class="rx-zi">考试不跪，考的全会，蒙的全会，有点烫嘴~耶，skr,skr~</p>
+								<p class="rx-zi">高多学学我们直男！多学学我们这些男人！男人的嘴怎么了？男人的嘴怎么了？(甜甜甜)</p>
+								<p class="rx-zi">现在在这个区，玩了50多局，胜率是...哎我给你们唱首歌吧！(彳亍口巴大家知道你惨)</p>	
+								<p class="rx-zi">你们会配合我出演，你们特别好(感动之余有点想笑怎么回事)</p>
+								<p class="rx-zi">你是不是在强迫我..怎么有一点点不开心，又说不上来是为什么..</p>
+								<p class="rx-zi">啊啊啊崽啊！妈妈不准你这么撩！！！(小蝴蝶:谁又在窥视我的生活？)</p>	
+								<p class="rx-zi">哎呦你们真是，小姑娘还经不起逗(我可以！我可以！！)</p>
+								<p class="rx-zi">憋得时间太长的话，量就会变多(咦我怎么变成了黄色？)</p>
+								<p class="rx-zi">那你吃饭饭了吗？对呀你是不是有精神病病呀(你是什么大可爱爱吖)</p>
+								<p class="rx-zi">我就不！我就不！没用！就不！</p>	
+								<p class="rx-zi">别qaq了，啊啊啊吧(啊啊啊了不还是要嫌弃我们哼唧)</p>
+								<p class="rx-zi">点一首山有木兮送给你景，还要你景自己唱对吧？嗯？</p>
+								<p class="rx-zi">逻辑很对是吧？就像我既可以带你去看星星，也可以带你去看医生</p>	
+								<p class="rx-zi">我看你长得像套马杆儿</p>
+								<p class="rx-zi">突突突突，全都头秃(性感我景 在线做法???)</p>
+								<p class="rx-zi">所以女同学是怎么练就这样的手速的呢？这是一个很哲学的问题了(都给我往高速上开！)</p>	
+								<p class="rx-zi">好吗？好的！耶！(太可爱了！我可以！)</p>
+								<p class="rx-zi">哥哥不想唱《吻得太逼真》了怎么办？你们弄死哥哥呗(啊！！！哥哥！我又可以了！)</p>
+								<p class="rx-zi">乌鸡..吧，我小时候叫它黑脸鸡...</p>	
+								<p class="rx-zi">我可以说是个有求必应的主播了，嗯</p>
+								<p class="rx-zi">哪有很甜?你们最甜~你们都是小天使~咦好肉麻，我怎么这样！你们走开！(小蝴蝶:???)</p>
+								<p class="rx-zi">我有时候也会觉得和你们分开太久...这么肉麻！不是！不是！不是！</p>	
+								<p class="rx-zi">你也最好了，我也特别爱你，你是..？(彳亍只要你爱我，我可以没有姓名bushi..)</p>
+								<p class="rx-zi">你们的老父亲需要休息一下..闺女啊(来了爸爸！)</p>
+								<p class="rx-zi">你景不记得辣！你景忘记辣！(我景太可爱辣1551)</p>
+								<p class="rx-zi">要求那么多可还行，哥哥夺努力啊,你知道哥哥夺努力吗？(哥哥哥哥我可以buhi..)</p>	
+								<p class="rx-zi">喷嚏的话，一天就打好几百个，不是，这不就是你们想的不是..(咦？你好甜吖嘻嘻..)</p>
+								<p class="rx-zi">你们胖也很可爱啊(完了这肥减不成了)</p>					
+							</div>
+						</div>
+						<script type="text/javascript">
+						var rx=document.getElementById('rx');
+						var box1=document.getElementById('box1');
+	
+						var index1=0;
+						function next1(){
+							index1++;
+							animate(rx,{top:-33*index1},function(){
+								if(index1==32){
+									rx.style.top='0px';
+									index1=0;
+							}
+							})
+						}
+						var timer1=setInterval(next1,1500);
+						box1.onmouseover=function(){
+							clearInterval(timer1); 
+						}
+						box1.onmouseout=function(){
+							timer1=setInterval(next1,1500);
+						}
+						
+					</script>
+					</div>
+				<input type="button" value="重点来了"  name="t" id="tb" onclick="forever0()" />
+				<!-- <input type="button" value="你景好感动哦"  name="t" id="tb1" onclick="good()" />
+				<input type="button" value="你景内心毫无波澜甚至有点嫌弃"  name="t" id="tb2" onclick="bad()"/> -->
+			</div>
+		</div>
+		<div id="tanc0">
+			<p style="float: right;margin-right: 10px;cursor: pointer;" onclick="forever0x()">X</p>
+			<div class="z0">
+				<p style="margin-top: 60px;">每次日常说晚安都要磨叽几分钟啊，就有点舍不得</p>
+				<p>你以为我是傻的？你们每一个我能叫得出名字的我都记得</p>
+				<p>好了好了，想我是吧，我知道~</p>
+				<p>我知道你们想我了呀，所以我这不感冒也没好透就来陪你们了嘛</p>
+				<p>希望我的直播能给你们的世界观带来正面的东西，不然我就白播了</p>
+				<p>我不累啊，因为我每一次都隔这么多天直播，我知道你们也会想我嘛，不累</p>
+				<p>希望大家每个人都能身体健康，然后每天都能快乐，开开心心的，好不好？</p>
+				<p>嗯，我也会很开心的，你们开心我就开心呀</p>
+				<p>有了你们之后所有的日子都有了意义</p>
+				<p>我给你们唱着这首歌好不好？这首歌叫《你真漂亮》</p>
+				<p>不打算救你，谁让你中的毒是我呢</p>
+				<p>我觉得你们真好，真的我特别喜欢你们~</p>
+				<p>我打碎了那颗陨石，所以你们才会看到流星雨</p>
+				<p>何其有幸能和你们一起品一场江南的雪，我会一直记得</p>
+				<p>可爱乖巧懂事听话已经成为了每次见到你们以后最深刻的记忆，你们真的太美好了！</p>
+				<p>不管发生什么事情都要记得，你们还有我呐</p>
+				<p>我会一直在的，好吧？</p>
+				<input type="button" value="全世界最好的景向谁依"  name="t" id="tb0" onclick="forever00()" />
+			</div>
+		</div>
+		<div id="tanc00">
+			<p style="float: right;margin-right: 10px;cursor: pointer;" onclick="forever00x()">X</p>
+			<p style="margin-top: 60px;">在时间无涯的荒野里，没有早一步，也没有迟一步，我们遇见了你</p>
+			<p>过去的日子相互陪伴度过，未来的路也要一起走才行</p>
+			<p>不管你在哪里，做些什么</p>
+			<p>只要你回头，就能看到我们</p>
+			<p style="margin-top: 20px;">我们始终在你身后</p>
+				
+			<input type="button" value="emmmmm"  name="t" id="tb00" onclick="forever000()" />
+		</div>
+		<div id="tanc000">
+			<p style="float: right;margin-right: 10px;cursor: pointer;" onclick="forever000x()">X</p>
+			<p style="margin-top: 60px;">其实......</p>
+			<p>才不是什么没有晚一步都是骗你的呜呜呜</p>
+			<p>明明15年就认识你了！</p>
+			<p>然而都9012年了我还是个萌新！我恨！</p>
+			<p>不过还好还是信了你的邪</p>
+			<p>啊不</p>
+			<p>入了你的坑</p>
+			<p>以后就像你唱的一样:</p>
+			<span style="font-size: 22px;font-weight: bold;font-family: 'STXinwei'; margin-top: 5px;"><p>明天生动而具体</p>
+			<p>有且只有一个你</p></span>
+			<p style="margin-top: 5px;">未来大家一起走呀</p>
+			<p style="margin-top: 20px;">(请不要嫌弃我酸没文化真的很可怕的)</p>
+		</div>
+		<div id="tanc2">
+			<p style="float: right;margin-right: 10px;cursor: pointer;" onclick="zhaox()">X</p>
+			<a href="全世界最好的景向谁依.html"><input type="button" value="emmmmm"  name="t" id="good" onclick="good()" /></a>
+			<a href="冷酷景老师在线无理取闹.html"><input type="button" value="emmmmm"  name="t" id="bad" onclick="bad()" /></a>
+		</div>
+		<script type="text/javascript">
+			function zhao(){
+				var tanc=document.getElementById("tanc");
+				var zhao=document.getElementById("zhao");
+				tanc.style.display='block';
+				zhao.style.display='block';
+			}
+			function zhaox(){
+				var tanc=document.getElementById("tanc");
+				var zhao=document.getElementById("zhao");
+				tanc.style.display='none';
+				zhao.style.display='none';
+			}
+			function zhao1(){
+				var tanc2=document.getElementById("tanc2");
+				var zhao=document.getElementById("zhao");
+				tanc2.style.display='block';
+				zhao.style.display='block';
+			}
+			function zhao1x(){
+				var tanc2=document.getElementById("tanc2");
+				var zhao=document.getElementById("zhao");
+				tanc2.style.display='none';
+				zhao.style.display='none';
+			}
+			// function good(){
+			// 	var tanc1=document.getElementById("tanc1");
+			// 	tanc1.style.display='block';
+			// }
+			// function goodx(){
+			// 	var tanc0=document.getElementById("tanc0");
+			// 	tanc0.style.display='none';
+			// }
+			// function bad(){
+			// 	var tanc2=document.getElementById("tanc2");
+			// 	tanc2.style.display='block';
+			// }
+			// function badx(){
+			// 	var tanc2=document.getElementById("tanc2");
+			// 	tanc2.style.display='none';
+			// }
+			function forever0(){
+				var tanc0=document.getElementById("tanc0");
+				tanc0.style.display='block';
+			}
+			function forever0x(){
+				var tanc0=document.getElementById("tanc0");
+				tanc0.style.display='none';
+			}
+			function forever00(){
+				var tanc00=document.getElementById("tanc00");
+				tanc00.style.display='block';
+				var tanc=document.getElementById("tanc");
+				tanc.style.display='none';
+				forever0x();
+			}
+			function forever00x(){
+				var tanc00=document.getElementById("tanc00");
+				tanc00.style.display='none';
+				var zhao=document.getElementById("zhao");
+				zhao.style.display='none';
+			}
+			function forever000(){
+				var tanc000=document.getElementById("tanc000");
+				tanc000.style.display='block';
+				var tanc00=document.getElementById("tanc00");
+				tanc00.style.display='none';
+				forever0x();
+			}
+			function forever000x(){
+				var tanc000=document.getElementById("tanc000");
+				tanc000.style.display='none';
+				var zhao=document.getElementById("zhao");
+				zhao.style.display='none';
+			}
+		</script>
+	</body>
+</html>

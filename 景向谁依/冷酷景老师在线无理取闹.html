@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>冷酷景老师在线无理取闹8</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+			.tou{
+				width:100%;
+				height: 132px;
+				
+				margin-top: 0px;
+				z-index:100;
+				background-color: #fac4cc;
+			}
+			.cover{
+				width: 100%;
+				height: 132px;
+				z-index:100;
+				background-color: #fac4cc;
+				
+			}
+			.touz{
+				width: 1180px;
+				height: 132px;
+				margin:0 auto; 	
+				font-size: 60px;	
+				background-color: #fac4cc;	
+				font-family:"STXingkai";
+			}
+			.neirong{
+				width: 100%;
+				height: 620px;
+				background-color: #f9ecee;
+			}
+			.zhong5{
+				width: 1400px;
+				height: 620px;
+				margin:0 auto;
+			}
+			#neil{
+				width: 1400px;
+				height: 620px;
+				float: left;
+				background-color:#ffffff;
+				position: relative;
+				background-color: #f9ecee;
+			}
+			.neir{
+				width: 180px;
+				height: 632px;
+
+				background-color: #f9ecee;
+				position: absolute;
+				left: 1000px;
+				/*top:214px;*/
+			}
+			#box{
+				width:450px;
+				height:600px;
+				margin-left: 20px;
+				margin-top: 20px;
+				position: relative;
+				float: left;
+				border: 1px solid #d0cdc7;
+				}
+			#box1{
+				width:700px;
+				height:600px;
+				position:absolute; 
+				left:470px;
+				z-index: 2;
+				float: left;
+				margin-top: 20px;
+				border: 1px solid #d0cdc7;
+				display: none;
+				background-color: #ffffff;
+				}
+			#img1{
+				position:absolute;
+				left:0;
+				top:0;
+				border-right: 1px solid #d0cdc7;
+				}
+			#slider{
+				width:100px;
+				height:100px;
+				position:absolute;
+				left:0;
+				top:0;
+				background:#5f5e5a;
+				opacity:0.4;
+				cursor: move;
+				display:none; 
+				filter:alpha(opacity=40);
+				}
+			#img2{
+				position:absolute;
+				right:0;
+				top:0;
+				display:none; 
+				width:700px;
+				height:600px;
+				overflow:hidden;
+				z-index: 2;
+				}
+			#Bimg{
+				width: 1400px;
+				height: 1800px;
+				position:absolute;
+				left:0;
+				top:0;
+				z-index: 2;
+				}
+			/*#Bimg1{
+				width: 1400px;
+				height: 920px;
+				position:absolute;
+				left:0;
+				top:0;
+				z-index: 2;
+				}*/
+			.neilx{
+				width: 800px;
+				height: 62px;
+				position: absolute;
+				left: 20px;
+				top: 450px;
+				background-color: #f9ecee;
+			}	
+			#right{
+				margin-left: 235px;
+			}
+			.guodu{
+				width: 100%;
+				height: 1000px;
+				background-color: #f9ecee;
+			}
+			#but{
+				width: 100%;
+				height: 100px;
+				background-color: #f9ecee;
+				text-align: center;
+			}
+			#but1{
+				
+				width: 300px;
+				height: 60px;
+				font-size: 20px;
+				font-family:"STHupo";
+				border-radius: 25px;
+				background-color: #ffcccc;
+				cursor: pointer;
+			}
+			#butt1{
+				width: 300px;
+				height: 60px;
+				font-size: 20px;
+				font-family:"Times New Roman", Times, serif;
+				border-radius: 20px;
+				background-color: #ffcccc;
+				font-weight: bold;
+				margin-top: 40px;
+				cursor: pointer;
+				margin-left: 50px;
+			}
+			#zhao{
+				display: none; 
+				position: absolute; 	
+				top: 0%; 	
+				left: 0%; 	
+				width: 100%; 	
+				height: 1850px; 	
+				background-color: #dedcd8; 	
+				z-index:1001; 	
+				-moz-opacity: 0.6; 	
+				opacity:0.6; 	
+				filter: alpha(opacity=60);
+			}
+			#tanc{
+				width: 500px;
+				height: 620px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1000px;
+				left: 35%;
+				z-index:1002;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(b6.png) ;
+			}
+			#z{
+				width: 380px;
+				height: 490px;
+				margin:0 auto;
+				font-family:"FangSong";
+				font-size: 20px;
+			}
+			#tanc1{
+				width: 350px;
+				height: 340px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1200px;
+				left: 38%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq.png) ;
+			}
+			#tanc2{
+				width: 600px;
+				height: 617px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1000px;
+				left: 30%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq1.png) ;
+			}
+			#tanc3{
+				width: 600px;
+				height: 616px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1000px;
+				left: 30%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq2.png) ;
+			}
+			#tanc4{
+				width: 250px;
+				height: 500px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1000px;
+				left: 40%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq3.gif) ;
+				background-size: 100% 100%;
+			}
+			#tanc5{
+				width: 500px;
+				height: 619px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1000px;
+				left: 30%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq4.png) ;
+			}
+			#tanc6{
+				width: 344px;
+				height: 344px;
+				border:3px solid #aca9d3;
+				position: absolute;
+				top:1150px;
+				left: 38%;
+				z-index:1003;
+				background-color: #ffffff;
+				display: none;
+				background-image: url(wq5.jpg) ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zhao"></div>
+		<div class="tou">
+			<div class="cover">
+			<div class="touz">
+				<p style="background-color: #fac4cc;width: 700px;float: left;margin-top: 20px;">谁人闻香来，化蝶向景依</p>
+				<img src="2.png" style="width: 88px;height: 132px;float: left;position: absolute;z-index: 1;margin-left: 400px;" />
+				<p style="font-size: 25px;float: right;position: absolute;z-index: 2;top:90px;margin-left: 850px;">To——全世界最好的景向谁依</p>
+			</div>
+				
+
+			</div>
+		</div>
+	
+		<div class="neirong">
+			<div class="zhong5">
+				<div id="neil">
+					<div id="box">
+					    <div id="img1">
+					         <img src="big2.png"/ id="pp0" style="display: block;">
+					         <div id="slider"></div>
+					  	</div>
+					</div>
+					<div id="box1">
+					    <div id="img2">
+					    	<img src="big2.png"  id="Bimg"/ style="display: block;">
+					    </div>
+					</div class="zi">
+						<p style="font-weight: bold;margin-top: 100px;margin-left: 600px;font-size: 40px;font-family:'STCaiyun';">被嫌弃的小蝴蝶牌放大镜</p>
+						<p style="font-weight: bold;margin-top: 20px;margin-left: 640px;font-size: 40px;font-family:'STCaiyun';">专照各种黑照表情包</p>
+						<p style="font-weight: bold;margin-top: 20px;margin-left: 570px;font-size: 40px;font-family:'STCaiyun';">什么？我景太完美了找不到黑照？</p>
+						<p style="font-weight: bold;margin-top: 20px;margin-left: 640px;font-size: 40px;font-family:'STCaiyun';">那就放一张脱衣yan照叭</p>
+						<p style="font-weight: bold;margin-top: 20px;margin-left: 680px;font-size: 40px;font-family:'STCaiyun';">本放大镜又名</p>
+						<p style="font-weight: bold;margin-top: 20px;margin-left: 600px;font-size: 40px;font-family:'STCaiyun';">那些年我景的&nbsp&nbsp<span style="font-size: 65px;">骚</span>&nbsp&nbsp操作</p>
+					</div>
+					
+
+					<script>
+					 	var img1=document.getElementById("img1");
+						var img2=document.getElementById("img2");
+					 	var silder=document.getElementById("silder");
+					 	var Bimg=document.getElementById("Bimg");
+					 	var Bimg1=document.getElementById("Bimg1");
+					 	var box=document.getElementById("box");
+					 	var box1=document.getElementById("box1");
+					 	var neil=document.getElementById("neil");
+					 	var pp0=document.getElementById("pp0");
+					 	var pp1=document.getElementById("pp1");
+					 	var Sp0=document.getElementById("Sp0");
+					 	var Sp1=document.getElementById("Sp1");
+						img1.onmouseover=function(){
+					 		slider.style.display="block";
+					 		img2.style.display="block";
+					 		box1.style.display="block";
+					 	}
+					 	img1.onmouseout=function(){
+					 		slider.style.display="none";
+					 		img2.style.display="none";
+					 		box1.style.display="none";
+					 	}
+					 	img1.onmousemove=function(ev){
+						 	var oL=ev.clientX-box.offsetLeft-neil.offsetLeft-slider.offsetWidth/2;
+						 	var oT=ev.clientY-box.offsetTop-neil.offsetTop-slider.offsetHeight/2;
+						 	var oMaxw=img1.offsetWidth-slider.offsetWidth;
+						 	var oMaxh=img1.offsetHeight-slider.offsetHeight;
+						 	oL=oL>oMaxw?oMaxw:oL<0?0:oL;
+						 	oT=oT>oMaxh?oMaxh:oT<0?0:oT;
+						 	slider.style.left=oL+'px';
+						 	slider.style.top=oT+'px';
+						 	var maxOL = -oL*(400/285);
+						 	var maxOT = -oT*(400/305);
+						 	Bimg.style.left = maxOL + "px";
+						 	Bimg.style.top = maxOT + "px";
+						 	Bimg1.style.left = maxOL + "px";
+						 	Bimg1.style.top = maxOT + "px";
+						}
+						
+					</script>
+				
+			</div>
+		</div>
+		<div class="guodu"></div>
+		<div id="but">
+			<input type="button" value="点我点我吖"  name="but1" id="but1" onclick="zhao()" />
+		</div>
+		<div id="tanc">
+			<p style="float: right;margin-right: 10px;cursor: pointer;" onclick="zhaox()">X</p>
+			<div id="z">
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 60px;">你不是真心嫌弃我的对不对！</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">你只是想看看这个按钮是什么对不对！</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">本蝶夺努力啊</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">你知道本蝶夺努力吗</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">我告er你景向sei依</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">要想让我不委屈！一个字！</p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 25px;margin-left: 130px;"><span style="font-size: 45px;font-family: 'STHupo';">脱</span></p>
+				<p style="font-size: 25px;font-family:'FZShuTi';margin-top: 20px;">(..bushi景老师我敲代码把脑子敲坏了您把这段揭过去叭)</p>
+				<input type="button" value="啊啊啊我脑子坏啦"  name="but1" id="butt1" onclick="yyy()" />
+			</div>
+		</div>
+		<div id="tanc1"><p style="float: right;margin-right: 10px;cursor: pointer;font-size: 25px;" onclick="yyyx()">X</p></div>
+		<div id="tanc2"><p style="float: right;margin-right: 10px;cursor: pointer;font-size: 25px;" onclick="yyy1x()">X</p></div>
+		<div id="tanc3"><p style="float: right;margin-right: 10px;cursor: pointer;font-size: 25px;" onclick="yyy2x()">X</p></div>
+		<div id="tanc4"></div>
+		<div id="tanc5"></div>
+		<div id="tanc6"><p style="float: right;margin-right: 10px;cursor: pointer;font-size: 25px;" onclick="yyy5x()">X</p></div>
+		<script>
+
+						
+			function zhao(){
+				var tanc=document.getElementById("tanc");
+				var zhao=document.getElementById("zhao");
+				tanc.style.display='block';
+				zhao.style.display='block';
+			}
+			function zhaox(){
+				var tanc=document.getElementById("tanc");
+				var zhao=document.getElementById("zhao");
+				tanc.style.display='none';
+				zhao.style.display='none';
+			}
+			function yyy(){
+				var tanc1=document.getElementById("tanc1");
+				tanc1.style.display='block';
+				var tanc=document.getElementById("tanc");
+				tanc.style.display='none';
+			}
+			function yyyx(){
+				var tanc1=document.getElementById("tanc1");
+				tanc1.style.display='none';
+				var tanc2=document.getElementById("tanc2");
+				tanc2.style.display='block';
+			}
+			function yyy1x(){
+				var tanc2=document.getElementById("tanc2");
+				tanc2.style.display='none';
+				var tanc3=document.getElementById("tanc3");
+				tanc3.style.display='block';
+			}
+			function yyy2x(){
+				var tanc3=document.getElementById("tanc3");
+				tanc3.style.display='none';
+				var tanc4=document.getElementById("tanc4");
+				tanc4.style.display='block';
+				setTimeout(yyy3x,2000);
+			}
+			function yyy3x(){
+				var tanc4=document.getElementById("tanc4");
+				tanc4.style.display='none';
+				var tanc5=document.getElementById("tanc5");
+				tanc5.style.display='block';
+				setTimeout(yyy4x,2000);
+			}
+			function yyy4x(){
+				var tanc5=document.getElementById("tanc5");
+				tanc5.style.display='none';
+				var tanc6=document.getElementById("tanc6");
+				tanc6.style.display='block';
+			}
+			function yyy5x(){
+				var tanc6=document.getElementById("tanc6");
+				tanc6.style.display='none';
+				var zhao=document.getElementById("zhao");
+				zhao.style.display='none';
+			}
+			
+			window.onload = function() {
+				var cover = document.getElementsByClassName('cover')[0];
+				window.onscroll = function(){
+					var st = document.documentElement.scrollTop || document.body.scrollTop;
+					if (st>180) {
+						cover.style.position = 'fixed';
+					}else{
+						cover.style.position = 'static';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
